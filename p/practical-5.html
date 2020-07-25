@@ -4,20 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImageMap</title>
+
     <base href="https://ramballabh.github.io/Full_Stack_Practicals/" />
+
+    <style>
+        body{
+            background-color:silver;
+        }
+        h2{
+            color: snow;
+        }
+        p{
+            color:red;
+        }
+        #first{
+            text-align: center;
+        }
+    </style>
+
 </head>
-<body style="background-color:silver;">
+<body>
+    <div id="first">
     <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/menu.png" alt="menu">
-    <h2 style="color:snow"><center>Introduction to Front-End Technologies</center></h2>
-    <center><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Practical-5.jpg" usemap="#map"></center>
+    <h2>Introduction to Front-End Technologies</h2>
+    <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Practical-5.jpg" usemap="#map">
     <map id="map" name="map">
         <area href="practical-5-html.html" shape="rect" coords="17,7,172,167">
         <area shape="circle" coords="287,96,91" href="practical-5-css.html">
         <area shape="rect" coords="23,196,171,338" href="practical-5-js.html">
         <area shape="poly" coords="231,223,288,202,347,222,338,301,288,329,239,301" href="practical-5-b.html">
     </map>
-    <center><p style="color: red;">Click on any part of logo to know more about these technologies</p></center>
+    <p>Click on any part of logo to know more about these technologies</p>
 
-    
+    </div>
 </body>
 </html>
