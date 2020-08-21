@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-9</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 1200px;
+            padding: 10px;
+            margin: 0px auto;
+            border: 2px solid black;
+        }
+        #header{
+            background-color: gray;
+            height: 70px;
+            width: 100%;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: white;
+            position: sticky;
+            top:0;
+        }
+        .menu{
+            float: right;
+            margin: 10px;
+        }
+
+        .menu li{
+            float: left;
+            list-style-type: none;
+            margin-right: 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+
+        .menu li a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+        }
+
+        #header ul li a:hover{
+            color: black;
+            background-color: white;
+        }
+
+        #banner{
+            height: 740px;
+            margin-bottom: 100px;
+            font-size: 40px;
+            background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/8.jpg");
+            background-position: right;
+        }
+
+        #banner h2{
+            padding-top: 15px;
+            padding-left: 10px;
+            color: white;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .circle img{
+            border: 3px solid lightgray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 50px 30px;
+        }
+        #content{
+            background-color: gray;
+            height: 470px;
+            width: 49%;
+            margin-bottom: 100px;
+            margin-right: 10px;
+            margin-top: 50px;
+            color: white;
+            padding: 10px;
+            float: left;
+            text-align: justify;
+        }
+
+        #Article-1{
+            height: 150px;
+            width: 47%;
+            margin-bottom: 15px;
+            margin-top: 50px;
+            background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/9.jpg");
+            background-position:top;
+            float: right;
+        }
+
+        #Article-2{
+            height: 150px;
+            width: 47%;
+            margin-bottom: 15px;
+            background-position:top;
+            background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/10.jpeg");
+            float: right;
+        }
+
+        #Article-3{
+            height: 150px;
+            width: 47%;
+            margin-bottom: 100px;
+            background-position:top;
+            background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/11.jpg");
+            float: right;
+        }
+
+        #box{
+            width: 220px;
+            height: 350px;
+            margin: 35px;
+            margin-bottom: 100px;
+            float: left;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        #box img {
+            width: 100%;
+            height: 40%;
+        }
+
+        #box a{
+            display: block;
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            height: 10%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box p{
+            padding: 0px 10px;
+            text-align: justify;
+        }
+
+        #footer{
+            background-color:violet;
+            height: 70px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;  
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a name="top"></a>
+        <div id="header">
+            <ul class="menu">
+                <li><a href="#top">HOME</a></li>
+                <li><a href="#section-2">ABOUT US</a></li>
+                <li><a href="#section-1">TEAM</a></li>
+                <li><a href="#section-3">TECHNOLOGIES</a></li>
+                <li><a href="#section-4">CONTACT</a></li>
+            </ul>
+        </div>
+        <div id="Main-content">
+            <div id="banner">
+                <h2>PRACTICAL-9</h2>
+            </div>
+
+            <a name="section-1"></a>
+            <br><br><br>
+            <div id="Section-1">
+                <h1>Team Members</h1>
+                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/4.png"></span>
+                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/5.png"></span>
+                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/6.png"></span>
+                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/7.png"></span>
+            </div>
+
+            <a name="section-2"></a>
+            <br><br><br>
+            <div id="Section-2">
+                <h1>About Us</h1>
+                <div id="content">
+                    <h4>About Projects</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum quisquam quasi et consequatur ad. Dignissimos officia sunt, eos eius praesentium ullam sint, cumque suscipit obcaecati, veniam illo impedit vel nisi ipsum fuga aspernatur quibusdam maxime id adipisci ex totam repellendus magni? Ut, repudiandae placeat. Quo odio, maiores praesentium cumque commodi dolorum veniam pariatur illo a eaque aut consequatur iure nemo itaque impedit molestiae excepturi magni tenetur repellat voluptatibus repudiandae ab. Eaque ipsam ratione odio ut libero facere molestias aliquid, quia facilis beatae, sequi sed cum inventore ipsa, maiores repellat! Vero asperiores maiores nostrum molestiae sequi optio laudantium, blanditiis aspernatur nulla beatae molestias. Pariatur ea possimus est commodi quae doloribus. Aliquam nemo quisquam sunt animi iste hic doloremque, itaque sint! Rerum quisquam veritatis autem accusantium laborum. Quae obcaecati distinctio atque delectus eaque eligendi impedit sapiente veritatis maxime cupiditate numquam, consectetur excepturi labore consequatur tempore? Itaque, ullam! Vel omnis voluptatum tempore soluta harum, molestias numquam voluptatibus, quisquam eligendi dignissimos, cumque nobis quam explicabo. Voluptatem ullam mollitia hic natus odit necessitatibus earum tempora asperiores atque. Blanditiis magni quia, quidem vero voluptatum voluptas assumenda nobis quis quam qui, nesciunt molestiae ipsum eaque sit totam earum praesentium. Vero omnis voluptatibus blanditiis rerum debitis nam.</p>
+                </div>
+                <div id="Article-1"><h3>Project-1</h3></div>
+                <div id="Article-2"><h3>Project-2</h3></div>
+                <div id="Article-3"><h3>Project-3</h3></div>
+            </div>
+
+            <a name="section-3"></a>
+            <br><br><br>
+            <div id="Section-3">
+                <h1>Technologies Used</h1>
+                <div id="box">
+                    <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/HTML.png">
+                    <h4>Introduction to HTML</h4>
+                    <p> HTML stands for Hypertext Markup Language and it is the most wisely used language to write Web pages.Hypertext refers to the way in which Web pages ...</p>
+                    <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-html.html">Read more</a>
+                </div>
+                <div id="box">
+                    <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Css.png">
+                    <h4>Introduction to CSS</h4>
+                    <p> Cascading Style Sheets, fondly reffered ta as CSS is a simply designed language intended to simplify the process of making web pages presentable CSS allows you to ...</p>
+                    <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-css.html">Read more</a>
+                </div>
+                <div id="box">
+                    <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Java_script.png">
+                    <h4>Introduction to JavaScript</h4>
+                    <p>JavaScript was created in the first place for DOM manipulation. Earlier websites were mostly static, after JS was created dynamic Web sites were made...</p>
+                    <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-js.html">Read more</a>
+                </div>
+                <div id="box">
+                    <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Boot_strap.png">
+                    <h4>Introduction to Bootstrap</h4>
+                    <p>Bootstrap is a free and open-source framework for creating websites and web applications. It's the most popular HTML, CSS, and JS framework for developing responsive...</p>
+                    <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-b.html">Read more</a>
+                </div>
+            </div>
+
+            <a name="section-4"></a>
+            <br><br><br><br>
+            <div id="Section-4">
+                <h1>Contact</h1>
+                <div id="footer">
+                    <p>Website Template for Practical-8. </p>
+                    <br>
+                    <a href="#top">Back to the top</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
