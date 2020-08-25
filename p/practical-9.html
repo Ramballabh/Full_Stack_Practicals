@@ -22,14 +22,14 @@
             margin: 0px auto;
         }
         #header{
-            background-color: gray;
-            height: 70px;
+            background-color: grey;
             width: 100%;
-            font-size: 20px;
-            color: white;
-            position: sticky;
-            top:0;
-        }
+            height: 70px;
+            max-width: 1200px;
+            position: fixed;
+            top: 0;
+            height: 70px;
+       }
         .menu{
             float: right;
             padding: 0px 20px;
@@ -45,10 +45,13 @@
             text-decoration: none;
             color: white;
             display: block;
-            padding: 10px;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            transition: 0.5s;
         }
 
-        #header ul li a:hover{
+        .menu li a:hover{
             color: black;
             background-color: white;
         }
@@ -62,33 +65,59 @@
             display: none;
             float: right;
             padding-right: 20px;
-    }
-
-        #banner{
-            height: 740px;
-            margin-bottom: 100px;
+         }
+        h1 {
+            color: black;
             font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+        #banner{
+            height: 680px;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 15px;
+            display: flex;
+            font-size: 40px;
+            color: white;
             background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/8.jpg");
-            background-position: right;
+            background-position: center;
         }
 
         #banner h2{
-            padding-top: 15px;
-            padding-left: 10px;
+            margin: 20px;
             color: white;
             
         }
-        h1{
-            text-align: center;
-            font-size: 40px;
+
+        #Section-1 {
+            width: 100%;
+            margin: 15px auto;
         }
 
+        #Section-1::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
         .circle img{
-            border: 3px solid lightgray;
+            height: 250px;
+            width: 250px;
             border-radius: 50%;
             float: left;
-            margin: 50px 30px;
+            margin-left: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
         }
+
+        #Section-2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
         #content{
             background-color: gray;
             height: 460px;
@@ -172,68 +201,96 @@
         }
     
         @media( min-width: 801px) and (max-width: 1200px){
-            #header{
-                background-color: gray;
-                height: 70px;
+            #header {
                 width: 100%;
-                margin-bottom: 50px;
-                font-size: 20px;
-                color: white;
-                position: sticky;
-                top:0;
+                background-color: grey;
+                position: fixed;
+                top: 0;
+                height: 70px;
             }
+
             .menu{
                 float: right;
-                margin: 10px;
             }
 
             .menu li{
-                float: left;
+                display: inline-block;
                 list-style-type: none;
-                margin-right: 10px; 
-                display: flex;
-                justify-content: center;
-                align-items: center;  
+                line-height: 70px; 
             }
 
             .menu li a{
                 text-decoration: none;
                 color: white;
                 display: block;
-                padding: 10px;
+                padding: 0px 20px;
+                font-size: 20px;
+                text-transform: uppercase;
             }
 
-            #header ul li a:hover{
+            .menu li a:hover{
                 color: black;
                 background-color: white;
             }
 
-            
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+            }
+            .show-btn,
+            .hide-btn,
+            #chk {
+                font-size: 30px;
+                line-height: 70px;
+                color: white;
+                display: none;
+                float: right;
+                padding-right: 20px;
+            }
+
+
             #banner{
-                height: 740px;
-                margin-bottom: 100px;
+                height: 680px;
+                width: 100%;
+                margin-bottom: 15px;
+                margin-top: 90px;
                 font-size: 40px;
                 background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/8.jpg");
                 background-position: right;
             }
 
             #banner h2{
-                padding-top: 15px;
-                padding-left: 10px;
-                color: white;
-                
+                margin: 20px 20px;
+                color: #fff;
             }
+
             h1{
                 text-align: center;
                 font-size: 40px;
             }
 
+            #Section-1 {
+                width: 100%;
+            }
+
+            #Section-1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
             .circle img{
-                border: 3px solid lightgray;
+                height: 250px;
+                width: 250px;
                 border-radius: 50%;
                 float: left;
-                margin: 50px 30px 50px 40px;
-                width: 500px;
+                margin-left: 15%;
+                margin-bottom: 20px;
+            }
+
+            #Section-2::after {
+                content: '';
+                display: block;
+                clear: both;
             }
             #content{
                 background-color: gray;
@@ -276,37 +333,53 @@
                 float: right;
             }
 
+            #Section-3 {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #Section-3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
             #box{
-                width: 500px;
-                height: 500px;
-                margin: 50px;
-                margin-bottom: 100px;
+                width: 38%;
+                margin-left: 65px;
+                margin-bottom: 20px;
                 float: left;
                 background-color: lightgray;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+            #box h4 {
+                margin: 0px 10px;
                 text-align: center;
             }
 
             #box img {
-                width: 90%;
-                height: 250px;
-                padding:20px;
+                width: 100%;
+                margin-bottom: 10px;
+                height: 150px;
+                
             }
 
             #box a{
                 display: block;
-                text-decoration: none;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
                 background-color: red;
-                color: white;
-                height: 10%;
-                border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
             }
             #box p{
-                padding: 10px;
+                margin: 10px;
+                font-size: 20px;
                 text-align: justify;
-                line-height: 40px;
+                line-height: 30px;
+                color: white;
             }
 
             #footer{
@@ -365,103 +438,148 @@
             }
             
             #banner{
-                height: 740px;
-                margin-bottom: 100px;
-                font-size: 40px;
-                background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/8.jpg");
-                background-position: right;
+                width: 100%;
+                height: 350px;
+                margin-bottom: 15px;
+                display: flex;
+                font-size: 30px;
+                color: white;
+                margin-top: 90px;
             }
 
             #banner h2{
-                padding-top: 15px;
-                padding-left: 10px;
-                color: white;
-                
+                margin: 10px 20px;
+                color: #fff;
             }
             h1{
                 text-align: center;
                 font-size: 40px;
             }
 
-            .circle img{
-                border: 3px solid lightgray;
+            #Section-1 {
+                width: 100%;
+            }
+
+            #Section-1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                height: 250px;
+                width: 250px;
                 border-radius: 50%;
                 float: left;
-                margin: 50px 30px 50px 40px;
-                width: 500px;
+                margin-left: 10%;
+                margin-bottom: 20px;
             }
+
             #content{
                 background-color: gray;
-                height: 460px;
-                width: 49%;
-                margin-bottom: 100px;
+                height: 200px;
+                width: 100%;
+                margin-bottom: 20px;
                 margin-right: 10px;
                 margin-top: 50px;
                 color: white;
-                padding: 10px;
                 float: left;
                 text-align: justify;
             }
+            #content h2{
+                text-align: left;
+                margin: 5px;
+            }
+            #content p{
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
 
             #Article-1{
-                height: 150px;
-                width: 47%;
-                margin-bottom: 15px;
-                margin-top: 50px;
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
                 background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/9.jpg");
                 background-position:top;
-                float: right;
+                overflow: hidden;
             }
 
             #Article-2{
-                height: 150px;
-                width: 47%;
-                margin-bottom: 15px;
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
                 background-position:top;
                 background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/10.jpeg");
-                float: right;
+                overflow: hidden;
             }
 
             #Article-3{
-                height: 150px;
-                width: 47%;
-                margin-bottom: 100px;
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
                 background-position:top;
                 background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/11.jpg");
-                float: right;
+                overflow: hidden;
+            }
+            #Section-4{
+                width: 100%;
+                margin: 15px auto;
+            }
+            #Section-4::after {
+                content: '';
+                display: block;
+                clear: both;
             }
 
             #box{
-                width: 500px;
-                height: 500px;
-                margin: 50px;
-                margin-bottom: 100px;
+                width: 37%;
+                margin-left: 65px;
+                margin-bottom: 20px;
                 float: left;
                 background-color: lightgray;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            #box h4 {
+                margin: 0px 10px;
                 text-align: center;
             }
 
             #box img {
-                width: 90%;
-                height: 250px;
-                padding:20px;
+                width: 100%;
+                margin-bottom: 10px;
+                height: 150px;
+                
             }
 
             #box a{
                 display: block;
-                text-decoration: none;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
                 background-color: red;
-                color: white;
-                height: 10%;
-                border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
             }
             #box p{
-                padding: 10px;
+                margin: 10px;
+                font-size: 15px;
                 text-align: justify;
-                line-height: 40px;
+                line-height: 20px;
+                color: white;
             }
 
             #footer{
@@ -474,7 +592,183 @@
                 font-size: 10px;  
             }
         }
+        @media (max-width: 625px) {
         
+            #container {
+                min-width: 320px;
+            }
+
+            .show-btn {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+             }
+
+            .menu li {
+                display: block;
+            }
+
+            .manu li a {
+                display: block;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+            #banner {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 15px;
+                color: white;
+                margin-top: 90px;
+            }
+
+            #banner h2 {
+                margin: 10px 20px;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            #Section-1{
+                width: 90%;
+                margin-left: 10%;
+            }
+
+            .circle img {
+                height: 70%;
+                width: 70%;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+
+            #content{
+                width: 100%;
+                height: 200px;
+                background-color: gray;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            #content h2{
+                text-align: left;
+                margin: 5px;
+            }
+
+            #content p{
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #Article-1{
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/9.jpg");
+                background-position:top;
+                overflow: hidden;
+                color: black;
+            }
+
+            #Article-2{
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                background-position:top;
+                background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/10.jpeg");
+                overflow: hidden;
+            }
+
+            #Article-3{
+                height: 124px;
+                width: 100%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                background-position:top;
+                background-image: url("https://ramballabh.github.io/Full_Stack_Practicals/img/11.jpg");
+                overflow: hidden;
+            }
+
+            #Section-4{
+                width: 100%;
+            }
+
+            #box{
+                width: 90%;
+                max-height: 500px;
+                margin-left: 30px;
+                margin-bottom: 20px;
+                background-color: lightgray;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            #box h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            #box img {
+                width: 100%;
+                margin-bottom: 10px;
+                height: 200px;
+            }
+
+            #box a{
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+            #box p{
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+
+            #footer{
+                background-color:violet;
+                height: 70px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px;  
+            }
+        }   
     </style>
 </head>
 <body>
@@ -505,10 +799,10 @@
             <br><br><br>
             <div id="Section-1">
                 <h1>Team Members</h1>
-                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/4.png"></span>
-                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/5.png"></span>
-                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/6.png"></span>
-                <span class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/7.png"></span>
+                <div class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/4.png"></div>
+                <div class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/5.png"></div>
+                <div class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/6.png"></div>
+                <div class="circle"><img src="https://ramballabh.github.io/Full_Stack_Practicals/img/7.png"></div>
             </div>
 
             <a name="section-2"></a>
@@ -516,7 +810,7 @@
             <div id="Section-2">
                 <h1>About Us</h1>
                 <div id="content">
-                    <h4>About Projects</h4>
+                    <h2>About Projects</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum quisquam quasi et consequatur ad. Dignissimos officia sunt, eos eius praesentium ullam sint, cumque suscipit obcaecati, veniam illo impedit vel nisi ipsum fuga aspernatur quibusdam maxime id adipisci ex totam repellendus magni? Ut, repudiandae placeat. Quo odio, maiores praesentium cumque commodi dolorum veniam pariatur illo a eaque aut consequatur iure nemo itaque impedit molestiae excepturi magni tenetur repellat voluptatibus repudiandae ab. Eaque ipsam ratione odio ut libero facere molestias aliquid, quia facilis beatae, sequi sed cum inventore ipsa, maiores repellat! Vero asperiores maiores nostrum molestiae sequi optio laudantium, blanditiis aspernatur nulla beatae molestias. Pariatur ea possimus est commodi quae doloribus. Aliquam nemo quisquam sunt animi iste hic doloremque, itaque sint! Rerum quisquam veritatis autem accusantium laborum. Quae obcaecati distinctio atque delectus eaque eligendi impedit sapiente veritatis maxime cupiditate numquam, consectetur excepturi labore consequatur tempore? Itaque, ullam! Vel omnis voluptatum tempore soluta harum, molestias numquam voluptatibus, quisquam eligendi dignissimos, cumque nobis quam explicabo. Voluptatem ullam mollitia hic natus odit necessitatibus earum tempora asperiores atque. Blanditiis magni quia, quidem vero voluptatum voluptas assumenda nobis quis quam qui, nesciunt molestiae ipsum eaque sit totam earum praesentium. Vero omnis voluptatibus blanditiis rerum debitis nam.</p>
                 </div>
                 <div id="Article-1"><h3>Project-1</h3></div>
@@ -531,25 +825,25 @@
                 <div id="box">
                     <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/HTML.png">
                     <h4>Introduction to HTML</h4>
-                    <p> HTML stands for Hypertext Markup Language and it is the most wisely used language to write Web pages.Hypertext refers to the way in which Web pages ...</p>
+                    <p> HTML stands for Hypertext Markup Language and it is the most wisely used language to write Web pages.Hypertext refers to the way in which ...</p>
                     <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-html.html">Read more</a>
                 </div>
                 <div id="box">
                     <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Css.png">
                     <h4>Introduction to CSS</h4>
-                    <p> Cascading Style Sheets, fondly reffered ta as CSS is a simply designed language intended to simplify the process of making web pages presentable CSS allows you to ...</p>
+                    <p> Cascading Style Sheets, fondly reffered ta as CSS is a simply designed language intended to simplify the process of making web pages presentable CSS...</p>
                     <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-css.html">Read more</a>
                 </div>
                 <div id="box">
                     <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Java_script.png">
                     <h4>Introduction to JavaScript</h4>
-                    <p>JavaScript was created in the first place for DOM manipulation. Earlier websites were mostly static, after JS was created dynamic Web sites were made...</p>
+                    <p>JavaScript was created in the first place for DOM manipulation. Earlier websites were mostly static, after JS was created dynamic Web sites...</p>
                     <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-js.html">Read more</a>
                 </div>
                 <div id="box">
                     <img src="https://ramballabh.github.io/Full_Stack_Practicals/img/Boot_strap.png">
                     <h4>Introduction to Bootstrap</h4>
-                    <p>Bootstrap is a free and open-source framework for creating websites and web applications. It's the most popular HTML, CSS, and JS framework for developing responsive...</p>
+                    <p>Bootstrap is a free and open-source framework for creating websites and web applications. It's the most popular HTML, CSS, and JS...</p>
                     <a href="https://ramballabh.github.io/Full_Stack_Practicals/p/practical-5-b.html">Read more</a>
                 </div>
             </div>
