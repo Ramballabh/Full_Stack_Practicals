@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: gray;
+        }
+
+        #header {
+            width: 100%;
+            height: 150px;
+            font-size: 35px;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #forms {
+            margin-top: 100px;
+            width: 350px;
+            height: 450px;
+            margin-left: 100px;
+            float: left;
+            box-shadow: 1px solid black;
+            background-color: white;
+        }
+
+        #forms-header1 {
+            width: 100%;
+            height: 30%;
+            background-image: linear-gradient(to right, orange, red);
+            color: white;
+        }
+
+        #heading {
+            padding-top: 20px;
+            padding-left: 135px;
+        }
+
+        .social {
+            margin: 30px 105px;
+        }
+
+        .social li {
+            list-style-type: none;
+            float: left;
+            padding-left: 25px;
+        }
+
+        .social li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+
+        .social ul li a i {
+
+            font-size: 30px;
+        }
+
+        #form1 {
+            width: 100%;
+            height: 70%;
+            padding-top: 30px;
+        }
+
+        #text1 {
+            background: transparent;
+            border: none;
+            width: 85%;
+            margin-left: 30px;
+            padding: 10px 0px 10px;
+            border-bottom: 2px solid black;
+        }
+
+        #pass1 {
+            background: transparent;
+            border: none;
+            width: 85%;
+            padding: 30px 0px 10px;
+            margin-left: 30px;
+            border-bottom: 2px solid black;
+        }
+
+        #form1 a {
+            padding-left: 240px;
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+        }
+
+        #form1 #btn1 {
+            color: white;
+            background-color: black;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 20px;
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+
+        #para1 {
+            font-size: 10px;
+            display: inline-block;
+            padding-left: 50px;
+            margin-top: 40px;
+        }
+
+        #para1 a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 0px;
+
+        }
+
+        #forms-header2 {
+            width: 100%;
+            height: 20%;
+            color: deeppink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form2 {
+            width: 100%;
+            height: 54%;
+        }
+
+        #chk {
+            padding: 25px;
+            font-size: 10px;
+        }
+
+        #chk a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        #form2 #btn2 {
+            color: black;
+            background-color: deeppink;
+            padding: 10px 30px;
+            border-radius: 20px;
+            margin-left: 20px;
+            border-color: deeppink;
+        }
+
+        #para2 {
+            font-size: 10px;
+            display: inline-block;
+            padding-left: 70px;
+            margin-top: 40px;
+        }
+
+        #para2 a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            padding: 0px;
+        }
+
+        #footer {
+            width: 100%;
+            height: 20%;
+            background-color: rgb(63, 63, 211);
+        }
+
+        #footer .social {
+            padding-top: 30px;
+        }
+
+
+        #forms-header3 {
+            width: 100%;
+            height: 20%;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form3 a {
+            padding-left: 240px;
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+        }
+
+        #form3 #btn3 {
+            color: white;
+            border-radius: 20px;
+            padding: 10px 120px;
+            margin: 20px;
+            margin-left: 30px;
+            margin-top: 60px;
+            border-color: blue;
+            background-image: linear-gradient(to right, skyblue, blue);
+        }
+
+        #para3{
+            font-size: 10px;
+            padding-left: 130px;
+        }
+
+        .social1 {
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social1 li {
+            list-style-type: none;
+            float: left;
+            padding: 0px 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+            border: 2px solid black;
+        }
+
+        .social1 li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: blue;
+        }
+
+        .social1 ul li a i {
+
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>FORM TEMPLATES</h1>
+        </div>
+        <div id="main-content">
+            <div id="forms">
+                <div id="forms-header1">
+                    <h2 id="heading">Log in</h2>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+                <form id="form1">
+                    <input type="text" value="Your Name" id="text1">
+                    <input type="password" value="Password" id="pass1">
+                    <a href="#">Forgot <b>Password?</b></a>
+                    <button id="btn1">Log in</button>
+                    <p id="para1">Don't have an acoount? <a href="#">Sign Up</a></p>
+                </form>
+            </div>
+            <div id="forms">
+                <div id="forms-header2">
+                    <h1>Sign up</h1>
+                </div>
+                <form id="form2">
+                    <input type="text" value="Your Name" id="text1">
+                    <input type="password" value="Password" id="pass1">&nbsp;&nbsp;
+                    <div id="chk">
+                        <input type="checkbox" id="chk1">&nbsp;&nbsp;
+                        <label for="chk1">Accept the <a href="#">Terms and Condition</a></label>
+                    </div>
+                    <button id="btn2">Sign up</button>
+                    <p id="para2">Have an acoount? <a href="#">Log in</a></p>
+                </form>
+                <div id="footer">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="forms">
+                <div id="forms-header3">
+                    <h1>Sign in</h1>
+                </div>
+                <form id="form3">
+                    <input type="text" value="Your Name" id="text1">
+                    <input type="password" value="Password" id="pass1">
+                    <a href="#">Forgot <b>Password?</b></a>
+                    <button id="btn3">Sign in</button>
+                </form>
+                <p id="para3">or Sign in with</p>
+                <ul class="social1">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
