@@ -47,12 +47,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            color: yellow;
         }
-        #minus p{
+        #minus #btn-minus{
             font-size: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            background-color: yellow;
         }
 
         #plus{
@@ -62,11 +65,13 @@
             border: 2px solid black;
         }
 
-        #plus p{
+        #plus #btn-plus{
             font-size: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -74,20 +79,26 @@
     <div id="content">
         <h1>COUNTER</h1><br><br>
         <div id="calculator">
-            <div id="minus" onclick="minus()"><p>-</p></div>
+            <div id="minus" onclick="minus()"><button id="btn-minus">-</button></div>
             <div id="output"><p id="out">0</p></div>
-            <div id="plus" onclick="plus()"><p>+</p></div>
+            <div id="plus" onclick="plus()"><button id="btn-plus">+</button></div>
         </div>
         <script>
             function minus(){
                 var a = document.getElementById("out");
-                if(a.innerHTML > 0){
+                if(a.innerHTML <= 0){
+                    document.getElementById("btn-minus").disabled=true;
+                }
+                else{
                     a.innerHTML = a.innerHTML - 1;
                 }
             }
 
             function plus(){
                 var a = document.getElementById("out");
+                if(document.getElementById("btn-minus").disabled){
+                    document.getElementById("btn-minus").disabled=false;
+                }
                 a.innerHTML = parseInt(a.innerHTML) + parseInt("1");
             }
         </script>
