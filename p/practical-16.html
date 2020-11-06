@@ -120,31 +120,37 @@
         var todo_input= document.getElementById("todo-input");
         var todo_button=document.getElementById("todo-button");
         var todo_list=document.querySelector(".todo-list");
-
+        var name = todo_input.value;
         todo_button.onclick = create;
         todo_list.onclick = checkdelete;
 
         function create(e){
-            e.preventDefault();                
-            var newdiv = document.createElement("div");
-            newdiv.classList.add("todo");
+            e.preventDefault();
+            if(todo_input.value){
+                var newdiv = document.createElement("div");
+                newdiv.classList.add("todo");
 
-            var newli = document.createElement("li");
-            newli.classList.add("todo-item");
-            newli.innerHTML=todo_input.value;
-            newdiv.appendChild(newli);
+                var newli = document.createElement("li");
+                newli.classList.add("todo-item");
+                newli.innerHTML=todo_input.value;
+                newdiv.appendChild(newli);
 
-            var checkbtn = document.createElement("button");
-            checkbtn.classList.add("check-btn");
-            checkbtn.innerHTML='<i class="fa fa-check" aria-hidden="true"></i>';
-            newdiv.appendChild(checkbtn);
+                var checkbtn = document.createElement("button");
+                checkbtn.classList.add("check-btn");
+                checkbtn.innerHTML='<i class="fa fa-check" aria-hidden="true"></i>';
+                newdiv.appendChild(checkbtn);
 
-            var deletebtn = document.createElement("button");
-            deletebtn.classList.add("delete-btn");
-            deletebtn.innerHTML='<i class="fa fa-trash-o" aria-hidden="true">';
-            newdiv.appendChild(deletebtn);
+                var deletebtn = document.createElement("button");
+                deletebtn.classList.add("delete-btn");
+                deletebtn.innerHTML='<i class="fa fa-trash-o" aria-hidden="true">';
+                newdiv.appendChild(deletebtn);
 
-            todo_list.appendChild(newdiv);
+                todo_list.appendChild(newdiv);
+                todo_input.value="";
+            }
+            else{
+                alert("Please Enter something");
+            }            
         }
 
         function checkdelete(e){
