@@ -52,19 +52,16 @@ function checkInput(){
     else{
         showSuccess(password2);
     }
-    
-
-    
 }
 
-function showError(username,msg){
+function showError(input,msg){
     const formcontrol = input.parentNode;
     formcontrol.className = 'form-control error';
     const small = formcontrol.querySelector('small');
     small.innerHTML = msg;
 }
 
-function showSuccess(username){
+function showSuccess(input){
     const formcontrol = input.parentNode;
     formcontrol.className = 'form-control success';
 }
